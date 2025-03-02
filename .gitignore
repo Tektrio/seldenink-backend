@@ -1,0 +1,8 @@
+.cache/puppeteer/
+node_modules/
+
+
+cache/
+
+
+config/config.env
