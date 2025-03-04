@@ -28,7 +28,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
     cors: {
-        origin: ['https://selden.ink','http://localhost:5173'],
+        origin: ['https://selden.ink','http://localhost:5173','https://www.selden.ink'],
         methods:['GET','POST'],
         credentials: true
     }
