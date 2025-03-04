@@ -40,7 +40,7 @@ router.patch('/admin/dashboard/employee/upload/:id', authMiddleware.isAuthentica
 // PATCH - New Employee
 router.patch('/admin/dashboard/employee/upload', authMiddleware.isAuthenticated, authMiddleware.permission('admin','owner'), upload.single('imageUrl'), adminController.uploadNewEmployeePhoto);
 
-router.patch('/admin/employee/upload/document/:id', authMiddleware.isAuthenticated, authMiddleware.permission('admin','owner'), upload.single('imageUrlDocument'), adminController.uploadAdminArtistDocumentPhoto);
+router.patch('/admin/employee/upload/document/:id', authMiddleware.isAuthenticated, authMiddleware.permission('admin','owner','user','artist'), upload.single('imageUrlDocument'), adminController.uploadAdminArtistDocumentPhoto);
 
 router.delete('/admin/dashboard/employee/delete/:id', authMiddleware.isAuthenticated, authMiddleware.permission('admin','owner'), adminController.deleteEmployee);
 

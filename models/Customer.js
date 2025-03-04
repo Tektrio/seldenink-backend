@@ -138,8 +138,7 @@ const Customer = new mongoose.Schema({
         type: String
     },
     referral_email: {
-        type: String,
-        unique: true
+        type: String
     },
     referral_phone: {
         type: String

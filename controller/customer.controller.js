@@ -20,6 +20,9 @@ const Book = require('../models/Book');
 exports.getMe = async(req,res,next) => {
     const customers = await Customer.findOne(req?.user?._id);
 
+
+    console.log(customers);
+
     res.status(200).json({
         customers
     })
